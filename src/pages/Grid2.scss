@@ -1,0 +1,70 @@
+.contenedor {
+    max-width: 1200px;
+    width: 90%;
+    height: calc(100vh - 100px);
+    margin: 20px auto;
+    grid-gap: 20px;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+
+    grid-template-areas: "contenido contenido sidebar"
+                          "widget1 widget2 sidebar"
+                          "footer footer footer"  ;
+
+    div {
+        padding: 15px;
+        border-radius: 4px;
+       
+    }
+
+
+    .contenido {
+        background-color: #42424242;
+        grid-area: contenido;
+    }
+
+    .sidebar {
+        background-color: #20ac66b9;
+        grid-area: sidebar;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .widget1 {
+        background-color: #42424242;
+        grid-area: widget1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+     
+    .widget2 {
+        background-color: #42424242;
+        grid-area: widget2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer {
+        background-color: #282bd1b9;
+        grid-area: footer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    
+}
+        
+@media screen and (max-width: 768px) {
+        .contenedor{
+            font-size: 70%;
+            grid-template-areas: "contenido contenido contenido"
+                                 "sidebar sidebar sidebar"
+                                 "widget1 widget1 widget2"
+                                 "footer footer footer"  ;
+        }
+            
+}
